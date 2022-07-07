@@ -82,6 +82,9 @@ DATABASES = {
         'PASSWORD': 'bsale_test',
         'HOST': 'mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com',
         'PORT': '',
+        'OPTIONS': {
+            'charset': 'utf8mb4'  # This is the relevant line
+        }
     }
 }
 
