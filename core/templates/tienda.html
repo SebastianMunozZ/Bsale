@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+{% for p in productos %}
+          <div class="card col-md-4 " id="{{p.tipo_prod}}{{p.id_prod}}">
+              <img src="{{p.url_image}}" class="card-img-top; img_donacion_modal" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{p.name}}</h5>
+                <p class="card-text">Valor: ${{p.price}}</p>
+                <p class="card-text">Stock: {{p.discount}}</p>
+                <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Mod_{{ p.id_prod }}">Información</a>
+              </div>
+          </div>
+{% endfor %}
+
+{% endblock content %}
